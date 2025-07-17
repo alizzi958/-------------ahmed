@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="container" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.wassup741.excel.comparator.select.SelectFilesWizard">
+	<center>
+		<SplitPane dividerPositions="0.5" BorderPane.alignment="CENTER">
+			<items>
+				<AnchorPane fx:id="left" minHeight="100.0" minWidth="100.0" />
+				<AnchorPane fx:id="right" minHeight="100.0" minWidth="100.0" />
+			</items>
+		</SplitPane>
+	</center>
+</BorderPane>

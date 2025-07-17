@@ -1,0 +1,34 @@
+/*---------------------------------------ALIGNMENT-------------------------------- */
+.align-top-left{
+	-fx-alignment: top-left  ;	
+}
+.align-top-center{
+	-fx-alignment:  top-center  ;
+}
+.align-top-right{
+	-fx-alignment:  top-right  ;
+}
+.align-center-left{
+	-fx-alignment: center-left ;	
+}
+.align-center-center{
+	-fx-alignment:  center  ;
+}
+.align-center-right{
+	-fx-alignment:  center-right  ;
+}
+.align-bottom-left{
+	-fx-alignment: bottom-left  ;	
+}
+.align-bottom-center{
+	-fx-alignment:  bottom-center  ;
+}
+.align-bottom-right{
+	-fx-alignment:  bottom-right  ;
+}
+
+/*--------------------------------------STRIKE---------------------------------------- */
+.strike .text{
+	-fx-strikethrough: true;
+}
+

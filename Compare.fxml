@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="root" xmlns="http://javafx.com/javafx/8" stylesheets="@compare.css" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.wassup741.excel.comparator.compare.CompareWizard">
+	<center>
+		<SplitPane dividerPositions="0.5" BorderPane.alignment="CENTER">
+			<items>
+				<AnchorPane fx:id="left" />
+				<AnchorPane fx:id="right" />
+			</items>
+		</SplitPane>
+	</center>
+   <top>
+      <AnchorPane fx:id="top" BorderPane.alignment="CENTER" />
+   </top>
+</BorderPane>

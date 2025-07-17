@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="797.0" prefWidth="1101.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.wassup741.excel.comparator2.MainController">
+	<left>
+		<VBox prefHeight="797.0" prefWidth="212.0" stylesheets="@links.css" BorderPane.alignment="CENTER">
+			<children>
+				<HBox alignment="TOP_RIGHT">
+					<children>
+						<Button fx:id="addUniqueLInk" alignment="CENTER" mnemonicParsing="false" text="Добавить" />
+						<Button fx:id="removeUniqueLink" alignment="CENTER" mnemonicParsing="false" text="Удалить" />
+					</children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+				</HBox>
+				<TableView fx:id="uniqueTable" prefHeight="200.0">
+					<columns>
+						<TableColumn fx:id="uniqueLeftColumn" prefWidth="95.0" resizable="false" sortable="false" style="-fx-alignment: CENTER;" text="Файл 1" />
+						<TableColumn fx:id="uniqueRightColumn" prefWidth="95.0" resizable="false" sortable="false" style="-fx-alignment: center;" text="Файл 2" />
+					</columns>
+				</TableView>
+				<HBox alignment="TOP_RIGHT" layoutX="10.0" layoutY="94.0">
+					<children>
+						<Button fx:id="addCompareLInk" alignment="CENTER" mnemonicParsing="false" text="Добавить" />
+						<Button fx:id="removeCompareLink" alignment="CENTER" mnemonicParsing="false" text="Удалить" />
+					</children>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+				</HBox>
+				<TableView fx:id="compareTable" prefHeight="200.0">
+					<columns>
+						<TableColumn fx:id="compareLeftColumn" prefWidth="95.0" resizable="false" sortable="false" style="-fx-alignment: center;" text="Файл 1" />
+						<TableColumn fx:id="compareRightColumn" prefWidth="95.0" resizable="false" sortable="false" style="-fx-alignment: center;" text="Файл 2" />
+					</columns>
+				</TableView>
+				<HBox alignment="CENTER">
+					<children>
+						<Button fx:id="compareButton" mnemonicParsing="false" prefHeight="35.0" prefWidth="150.0" text="Сравнить">
+							<HBox.margin>
+								<Insets top="50.0" />
+							</HBox.margin>
+						</Button>
+					</children>
+				</HBox>
+			</children>
+         <padding>
+            <Insets bottom="10.0" left="20.0" top="60.0" />
+         </padding>
+		</VBox>
+	</left>
+	<center>
+		<TabPane fx:id="tabPanel" prefHeight="200.0" prefWidth="200.0" stylesheets="@cellStyles.css" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+			<tabs>
+				<Tab text="Исходные файлы">
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+							<children>
+								<BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+									<center>
+										<SplitPane dividerPositions="0.5" BorderPane.alignment="CENTER">
+											<items>
+												<AnchorPane minHeight="0.0" minWidth="0.0">
+													<children>
+														<BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+															<center>
+																<AnchorPane fx:id="leftFileContainer" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+															</center>
+															<top>
+																<VBox BorderPane.alignment="CENTER">
+																	<children>
+																		<HBox>
+																			<children>
+																				<Button fx:id="browseLeft" defaultButton="true" mnemonicParsing="false" text="Открыть" />
+																				<Button fx:id="refreshLeft" mnemonicParsing="false" text="Обновить" />
+																				<Button fx:id="chooseColumnsLeft" mnemonicParsing="false" text="Столбцы" />
+																				<Button fx:id="chooseRangeLeft" mnemonicParsing="false" text="Диапазон" visible="false" />
+																			</children>
+																		</HBox>
+																		<Label fx:id="leftFileName">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font></Label>
+																	</children>
+																</VBox>
+															</top>
+														</BorderPane>
+													</children>
+												</AnchorPane>
+												<AnchorPane minHeight="0.0" minWidth="0.0">
+													<children>
+														<BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+															<center>
+																<AnchorPane fx:id="rightFileContainer" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+															</center>
+															<top>
+																<VBox BorderPane.alignment="CENTER">
+																	<children>
+																		<HBox>
+																			<children>
+																				<Button fx:id="browseRight" defaultButton="true" mnemonicParsing="false" text="Открыть" />
+																				<Button fx:id="refreshRight" mnemonicParsing="false" text="Обновить" />
+																				<Button fx:id="chooseColumnsRight" mnemonicParsing="false" text="Столбцы" />
+																				<Button fx:id="chooseRangeRight" mnemonicParsing="false" text="Диапазон" visible="false" />
+																			</children>
+																		</HBox>
+																		<Label fx:id="rightFileName">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font></Label>
+																	</children>
+																</VBox>
+															</top>
+														</BorderPane>
+													</children>
+												</AnchorPane>
+											</items>
+										</SplitPane>
+									</center>
+								</BorderPane>
+							</children>
+						</AnchorPane>
+					</content>
+				</Tab>
+				<Tab text="Результат">
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" stylesheets="@compare.css">
+							<children>
+								<BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+									<center>
+										<SplitPane dividerPositions="0.5" BorderPane.alignment="CENTER">
+											<items>
+												<AnchorPane minHeight="0.0" minWidth="0.0">
+                                       <children>
+                                          <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <center>
+                                                <AnchorPane fx:id="leftResultContainer" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                                             </center>
+                                             <top>
+                                                <VBox BorderPane.alignment="CENTER">
+                                                   <children>
+                                                      <HBox>
+                                                         <children>
+                                                            <Button fx:id="chooseColumnsLeftResult" mnemonicParsing="false" text="Столбцы" />
+                                                         </children>
+                                                      </HBox>
+                                                      <Label fx:id="leftResultFileName">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </VBox>
+                                             </top>
+                                          </BorderPane>
+                                       </children></AnchorPane>
+												<AnchorPane fx:id="rightResultContainer" minHeight="0.0" minWidth="0.0">
+                                       <children>
+                                          <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <center>
+                                                <AnchorPane fx:id="rightResultContainer" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                                             </center>
+                                             <top>
+                                                <VBox BorderPane.alignment="CENTER">
+                                                   <children>
+                                                      <HBox>
+                                                         <children>
+                                                            <Button fx:id="chooseColumnsRightResult" mnemonicParsing="false" text="Столбцы" />
+                                                         </children>
+                                                      </HBox>
+                                                      <Label fx:id="rightResultFileName">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </VBox>
+                                             </top>
+                                          </BorderPane>
+                                       </children></AnchorPane>
+											</items>
+										</SplitPane>
+									</center>
+									<top>
+										<HBox fx:id="resultToolbar" BorderPane.alignment="CENTER">
+											<children>
+												<Button fx:id="saveButton" mnemonicParsing="false" text="Сохранить">
+                                       <HBox.margin>
+                                          <Insets right="15.0" />
+                                       </HBox.margin></Button>
+											</children>
+											<BorderPane.margin>
+												<Insets />
+											</BorderPane.margin>
+										</HBox>
+									</top>
+								</BorderPane>
+							</children>
+						</AnchorPane>
+					</content>
+				</Tab>
+			</tabs>
+		</TabPane>
+	</center>
+</BorderPane>

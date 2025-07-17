@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane fx:id="root"  xmlns="http://javafx.com/javafx/8"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="com.wassup741.excel.comparator.link.MakeLinksWizard">
+	<left>
+		<TabPane fx:id="tabPanel" tabClosingPolicy="UNAVAILABLE"
+			BorderPane.alignment="CENTER">
+			<tabs>
+				<Tab text="Уникальные столбцы">
+					<content>
+						<AnchorPane fx:id="uniqueContainer" />
+					</content>
+				</Tab>
+				<Tab text="Столбцы для сравнения">
+					<content>
+						<AnchorPane fx:id="comparableContainer" />
+					</content>
+				</Tab>
+			</tabs>
+		</TabPane>
+	</left>
+	<center>
+		<SplitPane fx:id="split" dividerPositions="0.5"
+			BorderPane.alignment="CENTER">
+			<items>
+				<AnchorPane fx:id="leftSplit" />
+				<AnchorPane fx:id="rightSplit" />
+			</items>
+		</SplitPane>
+	</center>
+</BorderPane>

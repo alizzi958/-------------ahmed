@@ -1,0 +1,11 @@
+.spreadsheet-cell.compare-conflict {
+	-fx-background-color: rgba(255.0,0.0,0.0,0.3);
+}
+
+.spreadsheet-cell.compare-equal {
+	-fx-background-color: rgba(0.0,255.0,0.0,0.3);
+}
+
+.spreadsheet-cell.compare-empty {
+	-fx-background-color: rgba(0.0,0.0,255.0,0.3);
+}

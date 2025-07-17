@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" stylesheets="@makeLinks.css"
+	fx:controller="com.wassup741.excel.comparator.link.MakeLinksController">
+	<center>
+		<TableView fx:id="table" BorderPane.alignment="CENTER">
+			<columns>
+				<TableColumn fx:id="column1" text="Таблица 1" />
+				<TableColumn fx:id="column2" text="Таблица 2" />
+			</columns>
+		</TableView>
+	</center>
+	<top>
+		<HBox alignment="TOP_RIGHT">
+			<children>
+				<Button fx:id="addButton" mnemonicParsing="false" onAction="#addLink"
+					text="Добавить" />
+				<Button fx:id="deleteButton" mnemonicParsing="false"
+					onAction="#deleteLink" text="Удалить" />
+			</children>
+		</HBox>
+	</top>
+</BorderPane>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ASCII"?>
+<anttasks:AntTask xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:anttasks="http://org.eclipse.fx.ide.jdt/1.0" buildDirectory="${project}/build" cssToBin="true">
+  <deploy packagingFormat="all">
+    <application name="ExcelComparatorForm" mainclass="com.wassup741.excel.comparator.ExcelComparatorForm" version="0.0.1a" toolkit="fx"/>
+    <info title="Excel Comparator x86" vendor="Wassup741"/>
+  </deploy>
+  <signjar/>
+</anttasks:AntTask>
